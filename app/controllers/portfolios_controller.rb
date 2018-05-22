@@ -4,6 +4,14 @@ class PortfoliosController < ApplicationController
 		@portfolios = Portfolio.all
 	end
 
+	def react
+		@portfolios = Portfolio.react_items
+	end
+
+	def ruby_on_rails
+		@portfolios = Portfolio.ruby_on_rails_items
+	end
+
 	def new
 		@portfolio_item = Portfolio.new
 	end
